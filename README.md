@@ -1,8 +1,8 @@
 # Learning with Labels of Existing/Nonexisting
 A weak supervision/label learning method. Only need to know whether any instance of a class exists or not in a sample.
 
-We used optimization code https://github.com/lixilinx/psgd_torch/blob/master/preconditioned_stochastic_gradient_descent.py to train our models. You may try your favorite optimization methods.
+We used [this optimization code](https://github.com/lixilinx/psgd_torch/blob/master/preconditioned_stochastic_gradient_descent.py) to train our models. You may try your favorite optimization methods.
 
-We demonstrated its application to street view house number transcription using all convolutional networks. You may need to download and preprocess the SVHN dataset. The learned CNN model can directly read numbers in the images, as shown below.
+We demonstrated its applications to image recognition and street view house number transcription using all convolutional networks. For MNIST, we got test classification error rate slightly higher than 0.3%. For SVHN, we got sequence transcription error rate slightly higher than 5% with a model having about 7.5M coefficients (vs. about 4% by [this specialized model](https://arxiv.org/abs/1312.6082) having about 51M coefficients and trained with detailed annotations). Our learned model might be able to directly read the numbers in many of the original images as shown below. Preprocessed SVHN dataset and some pretrained models are [here](https://drive.google.com/drive/folders/1BvVpUw3OY3RtkJo-bfujwBsa0y6e49lZ).
 
 ![alt text](https://github.com/lixilinx/Learning_with_Labels_of_Existing-Nonexisting/blob/master/misc/svhn_test.png)
