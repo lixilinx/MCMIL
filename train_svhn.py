@@ -157,8 +157,8 @@ def test_loss():
 
 # train our model; use PSGD-Newton for optimization (virtually tuning free)
 Ws = [W1,W2,W3,W4,W5,W6,W7,W8,W9,W10]
-Qs = [[torch.eye(W.shape[0], device=device), 0.1*torch.eye(W.shape[1], device=device)] for W in Ws]
-grad_norm_clip_thr = 0.1*sum(W.shape[0]*W.shape[1] for W in Ws)**0.5 
+Qs = [[torch.eye(W.shape[0], device=device), torch.eye(W.shape[1], device=device)] for W in Ws]
+grad_norm_clip_thr = 0.05*sum(W.shape[0]*W.shape[1] for W in Ws)**0.5 
 TrainLoss, TestLoss, BestTestLoss = [], [], 1e30
 t0 = time.time()
 for epoch in range(num_epochs):
