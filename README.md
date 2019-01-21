@@ -1,5 +1,5 @@
 # Learning with Labels of Existing/Nonexisting
-A weak supervision/label learning method. Only need to know whether any instance of a class exists or not in a sample.
+A multiclass multiple instance learning method. Only need to know whether any instance of a class exists or not in a sample.
 
 We used [this optimization code](https://github.com/lixilinx/psgd_torch/blob/master/preconditioned_stochastic_gradient_descent.py) to train our models. You may try your favorite optimization methods.
 
