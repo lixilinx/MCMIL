@@ -56,9 +56,9 @@ def get_batch():#read training data; do some augumentations
     images = images[:,:, i:i+60, j:j+60]
     images = images[:, np.random.permutation(3)]#randomly permute (R, G, B)
     old_height, old_width = images.shape[2], images.shape[3]
-    new_size = random.randint(40, 70)#random height rescaling
+    new_size = random.randint(50, 70)#random height rescaling
     images = images[:,:,(np.arange(new_size)*(old_height-1)/(new_size-1)).astype(int)]
-    new_size = random.randint(40, 70)#random width rescaling
+    new_size = random.randint(50, 70)#random width rescaling
     images = images[:,:,:,(np.arange(new_size)*(old_width-1)/(new_size-1)).astype(int)]
     return images, labels
 
