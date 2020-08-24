@@ -1,4 +1,4 @@
-### Multiclass multiple instance learning
+### [Multiclass multiple instance learning](https://arxiv.org/abs/1811.12346)
 
 Please check function [log_prb_labels()](https://github.com/lixilinx/MCMIL/blob/04ad08465d45b2ee8d6174eb1f76dc809550eb16/utilities.py#L6) for logarithm bag probability calculation. Although we just demonstrate its application to multiple object detection and localization, this function accepts probability tensor P with other orders, as long as the first dimension is number_of_classes + 1.    
 
